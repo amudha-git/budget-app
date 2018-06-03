@@ -147,16 +147,18 @@ body {
 .add__value:focus,
 .add__type:focus,
 .add__description:hover,
-.add__value:hover,
-.add__btn:hover {
+.add__value:hover {
     outline: none;
     border: 1px solid #0ed0c1;
+}
+
+.add__btn:hover {
+    outline: none;
 }
 
 .container {
     width: 1000px;
     margin: 60px auto;
-    background-color: red;
 }
 
 .income,
@@ -190,7 +192,8 @@ body {
 }
 
 .item__income,
-.item__expense {
+.item__expense,
+    {
     float: left;
     transition: transform 0.3s;
 }
@@ -206,6 +209,12 @@ body {
     background-color: #f5f5f5;
     border-top: 1px solid #bebaba;
 
+}
+
+.item .expense-percentage {
+    display: none;
+    color: #F64747;
+    background-color: #edeaea;
 }
 
 .right {
@@ -233,8 +242,13 @@ body {
     color: #F64747;
 }
 
-.item:hover .item-delete {
-    display: block;
+.item:hover .item-delete,
+.item:hover .expense-percentage {
+    display: inline-block;
+}
+
+.item:hover .expense-percentage {
+    transform: translateX(-10px);
 }
 
 .item:hover .item__expense,
